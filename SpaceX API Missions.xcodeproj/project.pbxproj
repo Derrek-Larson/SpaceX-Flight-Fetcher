@@ -13,6 +13,27 @@
 		39F17D2328E0E70900E079A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F17D2128E0E70900E079A7 /* Main.storyboard */; };
 		39F17D2528E0E70B00E079A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F17D2428E0E70B00E079A7 /* Assets.xcassets */; };
 		39F17D2828E0E70B00E079A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F17D2628E0E70B00E079A7 /* LaunchScreen.storyboard */; };
+		39F17D3128E0EEB700E079A7 /* SpaceXFlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3028E0EEB700E079A7 /* SpaceXFlightModel.swift */; };
+		39F17D3328E0F1D300E079A7 /* LaunchDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3228E0F1D300E079A7 /* LaunchDate.swift */; };
+		39F17D3528E0F22200E079A7 /* LaunchFailureDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3428E0F22200E079A7 /* LaunchFailureDetails.swift */; };
+		39F17D3728E0F2C100E079A7 /* LaunchSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3628E0F2C100E079A7 /* LaunchSite.swift */; };
+		39F17D3928E0F2EA00E079A7 /* SiteId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3828E0F2EA00E079A7 /* SiteId.swift */; };
+		39F17D3B28E0F30000E079A7 /* SiteName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3A28E0F30000E079A7 /* SiteName.swift */; };
+		39F17D3D28E0F31F00E079A7 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3C28E0F31F00E079A7 /* Links.swift */; };
+		39F17D3F28E0F33300E079A7 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D3E28E0F33300E079A7 /* Rocket.swift */; };
+		39F17D4128E0F35700E079A7 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4028E0F35700E079A7 /* Fairings.swift */; };
+		39F17D4328E0F36A00E079A7 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4228E0F36A00E079A7 /* Ship.swift */; };
+		39F17D4528E0F38E00E079A7 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4428E0F38E00E079A7 /* FirstStage.swift */; };
+		39F17D4728E0F3DF00E079A7 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4628E0F3DF00E079A7 /* Core.swift */; };
+		39F17D4928E0F40A00E079A7 /* LandingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4828E0F40A00E079A7 /* LandingType.swift */; };
+		39F17D4B28E0F41A00E079A7 /* LandingVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D4A28E0F41A00E079A7 /* LandingVehicle.swift */; };
+		39F17D5328E0F46400E079A7 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5228E0F46400E079A7 /* SecondStage.swift */; };
+		39F17D5528E0F48400E079A7 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5428E0F48400E079A7 /* Payload.swift */; };
+		39F17D5728E0F50100E079A7 /* OrbitParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5628E0F50100E079A7 /* OrbitParams.swift */; };
+		39F17D5928E0F51700E079A7 /* ReferenceSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5828E0F51700E079A7 /* ReferenceSystem.swift */; };
+		39F17D5B28E0F52600E079A7 /* Regime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5A28E0F52600E079A7 /* Regime.swift */; };
+		39F17D5D28E0F53800E079A7 /* PayloadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5C28E0F53800E079A7 /* PayloadType.swift */; };
+		39F17D6228E0F60000E079A7 /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D6128E0F60000E079A7 /* JSONSchemaSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +45,27 @@
 		39F17D2428E0E70B00E079A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F17D2728E0E70B00E079A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39F17D2928E0E70B00E079A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F17D3028E0EEB700E079A7 /* SpaceXFlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXFlightModel.swift; sourceTree = "<group>"; };
+		39F17D3228E0F1D300E079A7 /* LaunchDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDate.swift; sourceTree = "<group>"; };
+		39F17D3428E0F22200E079A7 /* LaunchFailureDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFailureDetails.swift; sourceTree = "<group>"; };
+		39F17D3628E0F2C100E079A7 /* LaunchSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSite.swift; sourceTree = "<group>"; };
+		39F17D3828E0F2EA00E079A7 /* SiteId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteId.swift; sourceTree = "<group>"; };
+		39F17D3A28E0F30000E079A7 /* SiteName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteName.swift; sourceTree = "<group>"; };
+		39F17D3C28E0F31F00E079A7 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		39F17D3E28E0F33300E079A7 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		39F17D4028E0F35700E079A7 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
+		39F17D4228E0F36A00E079A7 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		39F17D4428E0F38E00E079A7 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
+		39F17D4628E0F3DF00E079A7 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		39F17D4828E0F40A00E079A7 /* LandingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingType.swift; sourceTree = "<group>"; };
+		39F17D4A28E0F41A00E079A7 /* LandingVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVehicle.swift; sourceTree = "<group>"; };
+		39F17D5228E0F46400E079A7 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
+		39F17D5428E0F48400E079A7 /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		39F17D5628E0F50100E079A7 /* OrbitParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitParams.swift; sourceTree = "<group>"; };
+		39F17D5828E0F51700E079A7 /* ReferenceSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceSystem.swift; sourceTree = "<group>"; };
+		39F17D5A28E0F52600E079A7 /* Regime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regime.swift; sourceTree = "<group>"; };
+		39F17D5C28E0F53800E079A7 /* PayloadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadType.swift; sourceTree = "<group>"; };
+		39F17D6128E0F60000E079A7 /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,7 @@
 		39F17D1A28E0E70900E079A7 /* SpaceX API Missions */ = {
 			isa = PBXGroup;
 			children = (
+				39F17D2F28E0E76800E079A7 /* Model */,
 				39F17D1B28E0E70900E079A7 /* AppDelegate.swift */,
 				39F17D1D28E0E70900E079A7 /* SceneDelegate.swift */,
 				39F17D1F28E0E70900E079A7 /* ViewController.swift */,
@@ -65,6 +108,42 @@
 				39F17D2928E0E70B00E079A7 /* Info.plist */,
 			);
 			path = "SpaceX API Missions";
+			sourceTree = "<group>";
+		};
+		39F17D2F28E0E76800E079A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39F17D6028E0F5EC00E079A7 /* Supporting Files */,
+				39F17D3028E0EEB700E079A7 /* SpaceXFlightModel.swift */,
+				39F17D3228E0F1D300E079A7 /* LaunchDate.swift */,
+				39F17D3428E0F22200E079A7 /* LaunchFailureDetails.swift */,
+				39F17D3628E0F2C100E079A7 /* LaunchSite.swift */,
+				39F17D3828E0F2EA00E079A7 /* SiteId.swift */,
+				39F17D3A28E0F30000E079A7 /* SiteName.swift */,
+				39F17D3C28E0F31F00E079A7 /* Links.swift */,
+				39F17D3E28E0F33300E079A7 /* Rocket.swift */,
+				39F17D4028E0F35700E079A7 /* Fairings.swift */,
+				39F17D4228E0F36A00E079A7 /* Ship.swift */,
+				39F17D4428E0F38E00E079A7 /* FirstStage.swift */,
+				39F17D4628E0F3DF00E079A7 /* Core.swift */,
+				39F17D4828E0F40A00E079A7 /* LandingType.swift */,
+				39F17D4A28E0F41A00E079A7 /* LandingVehicle.swift */,
+				39F17D5228E0F46400E079A7 /* SecondStage.swift */,
+				39F17D5428E0F48400E079A7 /* Payload.swift */,
+				39F17D5628E0F50100E079A7 /* OrbitParams.swift */,
+				39F17D5828E0F51700E079A7 /* ReferenceSystem.swift */,
+				39F17D5A28E0F52600E079A7 /* Regime.swift */,
+				39F17D5C28E0F53800E079A7 /* PayloadType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F17D6028E0F5EC00E079A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39F17D6128E0F60000E079A7 /* JSONSchemaSupport.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +217,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F17D3528E0F22200E079A7 /* LaunchFailureDetails.swift in Sources */,
+				39F17D3928E0F2EA00E079A7 /* SiteId.swift in Sources */,
+				39F17D3728E0F2C100E079A7 /* LaunchSite.swift in Sources */,
+				39F17D4B28E0F41A00E079A7 /* LandingVehicle.swift in Sources */,
+				39F17D4728E0F3DF00E079A7 /* Core.swift in Sources */,
 				39F17D2028E0E70900E079A7 /* ViewController.swift in Sources */,
+				39F17D5328E0F46400E079A7 /* SecondStage.swift in Sources */,
+				39F17D3B28E0F30000E079A7 /* SiteName.swift in Sources */,
+				39F17D4328E0F36A00E079A7 /* Ship.swift in Sources */,
+				39F17D3D28E0F31F00E079A7 /* Links.swift in Sources */,
+				39F17D3128E0EEB700E079A7 /* SpaceXFlightModel.swift in Sources */,
 				39F17D1C28E0E70900E079A7 /* AppDelegate.swift in Sources */,
+				39F17D5B28E0F52600E079A7 /* Regime.swift in Sources */,
+				39F17D4128E0F35700E079A7 /* Fairings.swift in Sources */,
+				39F17D4928E0F40A00E079A7 /* LandingType.swift in Sources */,
+				39F17D5728E0F50100E079A7 /* OrbitParams.swift in Sources */,
 				39F17D1E28E0E70900E079A7 /* SceneDelegate.swift in Sources */,
+				39F17D5528E0F48400E079A7 /* Payload.swift in Sources */,
+				39F17D5928E0F51700E079A7 /* ReferenceSystem.swift in Sources */,
+				39F17D5D28E0F53800E079A7 /* PayloadType.swift in Sources */,
+				39F17D4528E0F38E00E079A7 /* FirstStage.swift in Sources */,
+				39F17D3328E0F1D300E079A7 /* LaunchDate.swift in Sources */,
+				39F17D6228E0F60000E079A7 /* JSONSchemaSupport.swift in Sources */,
+				39F17D3F28E0F33300E079A7 /* Rocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
