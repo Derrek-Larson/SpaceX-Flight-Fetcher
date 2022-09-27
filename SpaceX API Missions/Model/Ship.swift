@@ -1,5 +1,3 @@
-// Ship.swift
-
 import Foundation
 
 enum Ship: String, Codable {

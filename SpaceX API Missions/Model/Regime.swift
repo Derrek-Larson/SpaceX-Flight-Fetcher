@@ -1,5 +1,3 @@
-// Regime.swift
-
 import Foundation
 
 enum Regime: String, Codable {

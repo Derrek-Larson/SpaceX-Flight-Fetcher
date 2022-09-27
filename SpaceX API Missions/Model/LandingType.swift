@@ -1,5 +1,3 @@
-// LandingType.swift
-
 import Foundation
 
 enum LandingType: String, Codable {

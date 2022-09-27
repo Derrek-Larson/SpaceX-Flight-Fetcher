@@ -1,5 +1,3 @@
-// PayloadType.swift
-
 import Foundation
 
 enum PayloadType: String, Codable {

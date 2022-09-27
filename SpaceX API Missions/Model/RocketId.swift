@@ -1,5 +1,3 @@
-// RocketID.swift
-
 import Foundation
 
 enum RocketID: String, Codable {

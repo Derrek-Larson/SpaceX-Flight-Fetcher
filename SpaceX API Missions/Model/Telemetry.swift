@@ -1,9 +1,16 @@
-// Telemetry.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let telemetry = try Telemetry(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.telemetryTask(with: url) { telemetry, response, error in
+//     if let telemetry = telemetry {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

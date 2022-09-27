@@ -1,5 +1,3 @@
-// SiteID.swift
-
 import Foundation
 
 enum SiteID: String, Codable {

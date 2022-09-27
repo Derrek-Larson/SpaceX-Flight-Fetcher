@@ -1,9 +1,16 @@
-// OrbitParams.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let orbitParams = try OrbitParams(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.orbitParamsTask(with: url) { orbitParams, response, error in
+//     if let orbitParams = orbitParams {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

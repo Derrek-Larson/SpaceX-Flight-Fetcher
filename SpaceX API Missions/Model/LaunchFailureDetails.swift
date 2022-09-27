@@ -1,9 +1,16 @@
-// LaunchFailureDetails.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let launchFailureDetails = try LaunchFailureDetails(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.launchFailureDetailsTask(with: url) { launchFailureDetails, response, error in
+//     if let launchFailureDetails = launchFailureDetails {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 
@@ -13,6 +20,7 @@ struct LaunchFailureDetails: Codable {
     let altitude: Int?
     let reason: String
 }
+
 // MARK: LaunchFailureDetails convenience initializers and mutators
 
 extension LaunchFailureDetails {

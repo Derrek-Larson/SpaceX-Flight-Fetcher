@@ -1,17 +1,24 @@
-// Rocket.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let rocket = try Rocket(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.rocketTask(with: url) { rocket, response, error in
+//     if let rocket = rocket {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 
 // MARK: - Rocket
 struct Rocket: Codable {
-    let rocketID: String
-    let rocketName: String
-    let rocketType: String
+    let rocketID: RocketID
+    let rocketName: RocketName
+    let rocketType: RocketType
     let firstStage: FirstStage
     let secondStage: SecondStage
     let fairings: Fairings?
@@ -45,9 +52,9 @@ extension Rocket {
     }
 
     func with(
-        rocketID: String? = nil,
-        rocketName: String? = nil,
-        rocketType: String? = nil,
+        rocketID: RocketID? = nil,
+        rocketName: RocketName? = nil,
+        rocketType: RocketType? = nil,
         firstStage: FirstStage? = nil,
         secondStage: SecondStage? = nil,
         fairings: Fairings?? = nil

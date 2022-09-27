@@ -1,9 +1,16 @@
-// SecondStage.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let secondStage = try SecondStage(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.secondStageTask(with: url) { secondStage, response, error in
+//     if let secondStage = secondStage {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

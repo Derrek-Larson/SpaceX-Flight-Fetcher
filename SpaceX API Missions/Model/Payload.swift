@@ -1,9 +1,16 @@
-// Payload.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let payload = try Payload(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.payloadTask(with: url) { payload, response, error in
+//     if let payload = payload {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

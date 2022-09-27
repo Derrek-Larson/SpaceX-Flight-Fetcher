@@ -1,5 +1,3 @@
-// RocketType.swift
-
 import Foundation
 
 enum RocketType: String, Codable {

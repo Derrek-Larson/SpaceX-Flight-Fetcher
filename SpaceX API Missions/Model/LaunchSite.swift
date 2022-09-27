@@ -1,9 +1,16 @@
-// LaunchSite.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let launchSite = try LaunchSite(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.launchSiteTask(with: url) { launchSite, response, error in
+//     if let launchSite = launchSite {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

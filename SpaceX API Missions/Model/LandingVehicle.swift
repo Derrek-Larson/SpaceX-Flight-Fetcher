@@ -1,5 +1,3 @@
-// LandingVehicle.swift
-
 import Foundation
 
 enum LandingVehicle: String, Codable {

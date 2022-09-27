@@ -1,9 +1,16 @@
-// Links.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let links = try Links(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.linksTask(with: url) { links, response, error in
+//     if let links = links {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

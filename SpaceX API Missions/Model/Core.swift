@@ -1,9 +1,16 @@
-// Core.swift
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let core = try Core(json)
+//
+// To read values from URLs:
+//
+//   let task = URLSession.shared.coreTask(with: url) { core, response, error in
+//     if let core = core {
+//       ...
+//     }
+//   }
+//   task.resume()
 
 import Foundation
 

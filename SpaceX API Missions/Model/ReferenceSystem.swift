@@ -1,5 +1,3 @@
-// ReferenceSystem.swift
-
 import Foundation
 
 enum ReferenceSystem: String, Codable {
