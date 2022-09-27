@@ -8,14 +8,15 @@
 import UIKit
 import Combine
 
-class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var tableView: UITableView!
     let cellReuseIdentifier = "flight_cell"
     let viewModel: SpaceXFlightsViewModel
-    private var cancellables = Set<AnyCancellable>()
+    let selectedFlightDetails = PassthroughSubject<String, Never>()
+    var cancellables = Set<AnyCancellable>()
     
     public init() {
         self.viewModel = SpaceXFlightsViewModel()
@@ -51,12 +52,14 @@ class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITab
         }
         do {
             guard let flightDataString = try spaceXFlightModelElement.jsonString(encoding: .utf8) else {
-                ("DEBUG FLIGHT DATA STRING FAILED: NIL RESULT")
+                print("DEBUG FLIGHT DATA STRING FAILED: NIL RESULT")
                 return
             }
-            let flightDetailViewController = FlightDetailViewController(nibName: "FlightDetailViewController", bundle: nil)
-            flightDetailViewController.flightDataString = flightDataString
-            navigationController?.pushViewController(flightDetailViewController, animated: true)
+            selectedFlightDetails.send(flightDataString)
+            if let detailViewController = splitViewController?.viewController(for: .secondary) as? FlightDetailViewController {
+                splitViewController?.showDetailViewController(detailViewController, sender: nil)
+            }
+            splitViewController?.show(.secondary)
         } catch {
             print("DEBUG FLIGHT DATA STRING FAILED")
         }
@@ -80,7 +83,13 @@ class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITab
         }.store(in: &cancellables)
         viewModel.fetchFlights()
     }
+    
+    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
+        return .primary
+    }
 
 
 }
+
+
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sel-Gh-YLg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUf-EG-0iv">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -8,6 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="w8N-je-5An">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" preferredDisplayMode="twoBeside" presentsWithGesture="NO" primaryBackgroundStyle="sidebar" id="nUf-EG-0iv" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Sel-Gh-YLg" kind="relationship" relationship="masterViewController" id="wdQ-fw-1J5"/>
+                        <segue destination="Eq9-Ye-QUO" kind="relationship" relationship="detailViewController" id="Y08-8C-esW"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8e-U6-yRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1632" y="-318"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Sy-dd-nhj">
             <objects>
@@ -23,6 +36,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sY0-Op-zyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-817" y="19"/>
+        </scene>
+        <!--Flight Detail View Controller-->
+        <scene sceneID="ape-og-KOI">
+            <objects>
+                <viewController id="rcg-r5-uzi" customClass="FlightDetailViewController" customModule="SpaceX_API_Missions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1P-hJ-sHY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-iQ-ZAg">
+                                <rect key="frame" x="8" y="99" width="374" height="703"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SpaceX Flight API Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-DU-dNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0T-u6-7L1">
+                                        <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="676.66666666666674"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-2f-276">
+                                                <rect key="frame" x="8" y="8.0000000000000124" width="366" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="11g-2f-276" firstAttribute="leading" secondItem="NfR-yD-cu0" secondAttribute="leading" constant="8" id="4Zu-3W-NWz"/>
+                                            <constraint firstItem="11g-2f-276" firstAttribute="trailing" secondItem="NfR-yD-cu0" secondAttribute="trailing" constant="8" id="Wwn-no-VqV"/>
+                                            <constraint firstItem="11g-2f-276" firstAttribute="top" secondItem="NfR-yD-cu0" secondAttribute="top" constant="8" id="ciG-uP-AfN"/>
+                                            <constraint firstItem="11g-2f-276" firstAttribute="bottom" secondItem="NfR-yD-cu0" secondAttribute="bottom" constant="-8" id="j87-Zk-hhL"/>
+                                            <constraint firstItem="11g-2f-276" firstAttribute="width" secondItem="L0T-u6-7L1" secondAttribute="width" constant="-8" id="w1m-H7-ifc"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="NfR-yD-cu0"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="mh1-q7-ER0"/>
+                                    </scrollView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7cl-xd-Syj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v7O-iQ-ZAg" firstAttribute="top" secondItem="7cl-xd-Syj" secondAttribute="top" constant="8" id="Pu9-Xd-xem"/>
+                            <constraint firstItem="v7O-iQ-ZAg" firstAttribute="leading" secondItem="7cl-xd-Syj" secondAttribute="leading" constant="8" id="U3h-ei-qe7"/>
+                            <constraint firstItem="7cl-xd-Syj" firstAttribute="bottom" secondItem="v7O-iQ-ZAg" secondAttribute="bottom" constant="8" id="Vbt-Ef-ibh"/>
+                            <constraint firstItem="7cl-xd-Syj" firstAttribute="trailing" secondItem="v7O-iQ-ZAg" secondAttribute="trailing" constant="8" id="cVI-cG-VpX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aDm-7s-jCu"/>
+                    <connections>
+                        <outlet property="dataLabel" destination="11g-2f-276" id="sfh-5c-3eH"/>
+                        <outlet property="scrollView" destination="L0T-u6-7L1" id="cTO-Yz-lAl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfR-JT-bLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.92307692307691" y="-665.40284360189571"/>
         </scene>
         <!--SpaceX Flight List Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -114,6 +186,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zQN-cK-coX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eq9-Ye-QUO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w6a-vf-3Ii">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rcg-r5-uzi" kind="relationship" relationship="rootViewController" id="rWb-6N-d39"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCP-mk-Dx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="-665.40284360189571"/>
         </scene>
     </scenes>
     <resources>

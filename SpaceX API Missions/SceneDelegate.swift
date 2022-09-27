@@ -7,15 +7,41 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let splitViewController = window?.rootViewController as? UISplitViewController else {
+            print("splitview cast failed")
+            fatalError()
+        }
+        guard let leftNavController = splitViewController.viewControllers.first as? UINavigationController else {
+            print("nav cast failed")
+            fatalError()
+        }
+        guard let mainViewController = leftNavController.viewControllers.first as? SpaceXFlightListController else {
+            print("main view cast failed")
+            fatalError()
+        }
+        guard let detailViewController = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController as? FlightDetailViewController else {
+            print("detail cast failed")
+            fatalError()
+        }
+        do {
+            let firstFlight = mainViewController.viewModel.flights.value?.first
+            detailViewController.flightDataString = try firstFlight?.jsonString(encoding: .utf8) ?? ""
+        } catch {
+            print("DEGUB SCENEDELEGATE .JSONSTRING FAILED")
+        }
+        mainViewController.selectedFlightDetails.sink {
+            detailViewController.flightDataStringP.send($0)
+        }.store(in: &mainViewController.cancellables)
+        
+        splitViewController.delegate = mainViewController
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
