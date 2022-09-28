@@ -10,7 +10,7 @@ import Combine
 
 class SpaceXFlightsViewModel {
     let flights = CurrentValueSubject<SpaceXFlightModel?, Never>(nil)
-    
+    var cancellables = Set<AnyCancellable>()
     public func flightForFlightNumber(flightNumber: Int) -> SpaceXFlightModelElement? {
         return flights.value?.first(where: { spaceFlightModelElement in
             spaceFlightModelElement.flightNumber == flightNumber

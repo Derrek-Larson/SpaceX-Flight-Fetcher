@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUf-EG-0iv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ub-c2-PxB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -42,11 +42,11 @@
             <objects>
                 <viewController id="rcg-r5-uzi" customClass="FlightDetailViewController" customModule="SpaceX_API_Missions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1P-hJ-sHY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-iQ-ZAg">
-                                <rect key="frame" x="8" y="99" width="374" height="703"/>
+                                <rect key="frame" x="8" y="99" width="374" height="656"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SpaceX Flight API Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-DU-dNF">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
@@ -55,7 +55,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0T-u6-7L1">
-                                        <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="676.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="629.66666666666674"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-2f-276">
                                                 <rect key="frame" x="8" y="8.0000000000000124" width="366" height="20.333333333333329"/>
@@ -101,18 +101,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SpaceXFlightListController" customModule="SpaceX_API_Missions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-nG-3fd">
-                                <rect key="frame" x="155" y="382" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1il-hL-4xf"/>
-                                    <constraint firstAttribute="width" constant="80" id="6pQ-VK-Gt6"/>
-                                </constraints>
-                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-Y4-VYf">
-                                <rect key="frame" x="8" y="91" width="374" height="711"/>
+                                <rect key="frame" x="8" y="91" width="374" height="664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SpaceX Flights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-SW-7NO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
@@ -121,44 +114,71 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uTJ-Rc-cKI">
-                                        <rect key="frame" x="0.0" y="34.333333333333314" width="374" height="676.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="34.333333333333314" width="374" height="629.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="flight_cell" id="TWg-NH-Htw" customClass="SpaceXFlightTableViewCell" customModule="SpaceX_API_Missions" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="374" height="52.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="50" width="374" height="116.33333587646484"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TWg-NH-Htw" id="lsU-7j-mdi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="52.666667938232422"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="116.33333587646484"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iuZ-I6-BUJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.666666666666664"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-Ls-Mzf">
+                                                            <rect key="frame" x="8" y="8" width="358" height="100.33333333333333"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlightID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBI-UB-7Oh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="24.333333333333332"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-7X-xkA">
-                                                                    <rect key="frame" x="0.0" y="32.333333333333336" width="374" height="20.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-hf-Huk">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="100.33333333333333"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="Jw8-fU-eZd"/>
+                                                                        <constraint firstAttribute="width" secondItem="aiB-hf-Huk" secondAttribute="height" multiplier="1:1" id="wDK-am-vMK"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iuZ-I6-BUJ">
+                                                                    <rect key="frame" x="100.33333333333334" y="0.0" width="257.66666666666663" height="100.33333333333333"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="MissionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBI-UB-7Oh">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="257.66666666666669" height="24"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Rocket Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-7X-xkA">
+                                                                            <rect key="frame" x="0.0" y="32" width="257.66666666666669" height="20.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="launch site name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDP-7Q-8TO">
+                                                                            <rect key="frame" x="0.0" y="60.333333333333321" width="257.66666666666669" height="11.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPx-Nu-poT">
+                                                                            <rect key="frame" x="0.0" y="80" width="257.66666666666669" height="20.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="iuZ-I6-BUJ" firstAttribute="leading" secondItem="lsU-7j-mdi" secondAttribute="leading" id="4Mw-mi-EEu"/>
-                                                        <constraint firstAttribute="bottom" secondItem="iuZ-I6-BUJ" secondAttribute="bottom" id="Gfh-Ub-eP2"/>
-                                                        <constraint firstAttribute="trailing" secondItem="iuZ-I6-BUJ" secondAttribute="trailing" id="VCM-SH-Z0g"/>
-                                                        <constraint firstItem="iuZ-I6-BUJ" firstAttribute="top" secondItem="lsU-7j-mdi" secondAttribute="top" id="rrr-Nb-jXa"/>
+                                                        <constraint firstItem="lR8-Ls-Mzf" firstAttribute="top" secondItem="lsU-7j-mdi" secondAttribute="top" constant="8" id="2ZJ-CM-R1B"/>
+                                                        <constraint firstItem="lR8-Ls-Mzf" firstAttribute="leading" secondItem="lsU-7j-mdi" secondAttribute="leading" constant="8" id="AD1-DI-zJe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lR8-Ls-Mzf" secondAttribute="trailing" constant="8" id="WhV-ZO-cuX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lR8-Ls-Mzf" secondAttribute="bottom" constant="8" id="wbh-37-GKx"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="flightDateLabel" destination="HcG-7X-xkA" id="8re-gi-V2w"/>
-                                                    <outlet property="flightIDLabel" destination="fBI-UB-7Oh" id="MrE-S0-jUl"/>
+                                                    <outlet property="launchDateLabel" destination="kPx-Nu-poT" id="Up9-XA-U6W"/>
+                                                    <outlet property="launchPatchImage" destination="aiB-hf-Huk" id="HTS-VE-WNa"/>
+                                                    <outlet property="launchSiteLabel" destination="tDP-7Q-8TO" id="L3r-EG-hJV"/>
+                                                    <outlet property="missionNameLabel" destination="fBI-UB-7Oh" id="MrE-S0-jUl"/>
+                                                    <outlet property="rocketNameLabel" destination="HcG-7X-xkA" id="8re-gi-V2w"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -172,20 +192,49 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eg2-Y4-VYf" secondAttribute="bottom" constant="8" id="AHi-ae-LxR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eg2-Y4-VYf" secondAttribute="trailing" constant="8" id="Em8-WR-ETK"/>
                             <constraint firstItem="Eg2-Y4-VYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GXb-Oa-e0l"/>
-                            <constraint firstItem="VS9-nG-3fd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IEG-PA-nSl"/>
                             <constraint firstItem="Eg2-Y4-VYf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l73-0u-AsJ"/>
-                            <constraint firstItem="VS9-nG-3fd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xip-tB-YCg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zkD-TK-gV2"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="VS9-nG-3fd" id="2wR-Nl-92l"/>
                         <outlet property="tableView" destination="uTJ-Rc-cKI" id="Z7K-1y-EkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
+        </scene>
+        <!--ContainerVC-->
+        <scene sceneID="nt7-Bx-b19">
+            <objects>
+                <viewController id="2ub-c2-PxB" customClass="ContainerVC" customModule="SpaceX_API_Missions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVe-Wc-js9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjo-o5-8ka">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <connections>
+                                    <segue destination="nUf-EG-0iv" kind="embed" identifier="splitViewEmbeded" id="qdZ-Dh-xFE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wFj-Xv-v4J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wFj-Xv-v4J" firstAttribute="bottom" secondItem="Mjo-o5-8ka" secondAttribute="bottom" id="KQn-5d-VRf"/>
+                            <constraint firstItem="Mjo-o5-8ka" firstAttribute="leading" secondItem="wFj-Xv-v4J" secondAttribute="leading" id="VwO-KD-je8"/>
+                            <constraint firstItem="Mjo-o5-8ka" firstAttribute="top" secondItem="wFj-Xv-v4J" secondAttribute="top" id="ZfT-CL-Ec5"/>
+                            <constraint firstItem="wFj-Xv-v4J" firstAttribute="trailing" secondItem="Mjo-o5-8ka" secondAttribute="trailing" id="sV0-Fh-Xba"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Mjo-o5-8ka" id="2rd-4B-02l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxK-an-aeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065" y="-1022"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zQN-cK-coX">

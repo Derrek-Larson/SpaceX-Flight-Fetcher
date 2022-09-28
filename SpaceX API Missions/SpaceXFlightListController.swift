@@ -9,13 +9,12 @@ import UIKit
 import Combine
 
 class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate {
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+        
     @IBOutlet weak var tableView: UITableView!
+    
     let cellReuseIdentifier = "flight_cell"
     let viewModel: SpaceXFlightsViewModel
-    let selectedFlightDetails = PassthroughSubject<String, Never>()
+    var imageCache: [Int: UIImage] = [:]
     var cancellables = Set<AnyCancellable>()
     
     public init() {
@@ -41,6 +40,16 @@ class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITab
             print("DEBUG FAILED ASSIGNMENT TO VIEWMODEL.FLIGHTS.VALUE[INDEXPATH.ROW]")
             return UITableViewCell()
         }
+        if let image = imageCache[flightElement.flightNumber] {
+            cell.launchPatchImage.image = image
+        } else {
+            guard let url = URL(string: flightElement.links.missionPatchSmall ?? "") else {
+                cell.configure(spaceXFlightElement: flightElement)
+                return cell
+            }
+            ImageFetcher.downloadImage(from: url, imageView: cell.launchPatchImage)
+            imageCache[flightElement.flightNumber] = cell.launchPatchImage.image ?? UIImage()
+        }
         cell.configure(spaceXFlightElement: flightElement)
         
         return cell
@@ -55,10 +64,11 @@ class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITab
                 print("DEBUG FLIGHT DATA STRING FAILED: NIL RESULT")
                 return
             }
-            selectedFlightDetails.send(flightDataString)
-            if let detailViewController = splitViewController?.viewController(for: .secondary) as? FlightDetailViewController {
+            if let detailViewController = (splitViewController?.viewController(for: .secondary) as? UINavigationController)?.topViewController as? FlightDetailViewController {
                 splitViewController?.showDetailViewController(detailViewController, sender: nil)
+                detailViewController.flightDataString = flightDataString
             }
+            
             splitViewController?.show(.secondary)
         } catch {
             print("DEBUG FLIGHT DATA STRING FAILED")
@@ -69,16 +79,10 @@ class SpaceXFlightListController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        activityIndicator.hidesWhenStopped = true
         viewModel.flights.sink { [weak self] spaceXFlightsModel in
             print("DEBUG FLIGHTS PUBLISHER SUBSCRIPTION HIT")
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
-                if(spaceXFlightsModel?.isEmpty == true || spaceXFlightsModel == nil){
-                    self?.activityIndicator.startAnimating()
-                } else {
-                    self?.activityIndicator.stopAnimating()
-                }
             }
         }.store(in: &cancellables)
         viewModel.fetchFlights()

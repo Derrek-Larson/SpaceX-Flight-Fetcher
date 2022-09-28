@@ -19,6 +19,7 @@
 		39622EC928E36A2C00DDCFA3 /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39622EC828E36A2C00DDCFA3 /* JSONSchemaSupport.swift */; };
 		39AC8F3628E3701200120338 /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AC8F3528E3701200120338 /* FlightDetailViewController.swift */; };
 		39BA4AD628E143F40022CC2A /* SpaceXFlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4AD528E143F40022CC2A /* SpaceXFlightsViewModel.swift */; };
+		39CD3B0028E3BC5F00A9D674 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD3AFF28E3BC5F00A9D674 /* ContainerViewController.swift */; };
 		39F17D1C28E0E70900E079A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D1B28E0E70900E079A7 /* AppDelegate.swift */; };
 		39F17D1E28E0E70900E079A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D1D28E0E70900E079A7 /* SceneDelegate.swift */; };
 		39F17D2028E0E70900E079A7 /* SpaceXFlightListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D1F28E0E70900E079A7 /* SpaceXFlightListController.swift */; };
@@ -43,6 +44,7 @@
 		39F17D5928E0F51700E079A7 /* ReferenceSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5828E0F51700E079A7 /* ReferenceSystem.swift */; };
 		39F17D5B28E0F52600E079A7 /* Regime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5A28E0F52600E079A7 /* Regime.swift */; };
 		39F17D5D28E0F53800E079A7 /* PayloadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F17D5C28E0F53800E079A7 /* PayloadType.swift */; };
+		39F819C828E3D3B1000C5C66 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F819C728E3D3B1000C5C66 /* ImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		39622EC828E36A2C00DDCFA3 /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
 		39AC8F3528E3701200120338 /* FlightDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
 		39BA4AD528E143F40022CC2A /* SpaceXFlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXFlightsViewModel.swift; sourceTree = "<group>"; };
+		39CD3AFF28E3BC5F00A9D674 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		39F17D1828E0E70900E079A7 /* SpaceX API Missions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX API Missions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F17D1B28E0E70900E079A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F17D1D28E0E70900E079A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		39F17D5828E0F51700E079A7 /* ReferenceSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceSystem.swift; sourceTree = "<group>"; };
 		39F17D5A28E0F52600E079A7 /* Regime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regime.swift; sourceTree = "<group>"; };
 		39F17D5C28E0F53800E079A7 /* PayloadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadType.swift; sourceTree = "<group>"; };
+		39F819C728E3D3B1000C5C66 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				39622EC828E36A2C00DDCFA3 /* JSONSchemaSupport.swift */,
+				39CD3AFF28E3BC5F00A9D674 /* ContainerViewController.swift */,
+				39F819C728E3D3B1000C5C66 /* ImageFetcher.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 				39F17D3928E0F2EA00E079A7 /* SiteId.swift in Sources */,
 				39622EBA28E3483800DDCFA3 /* RocketID.swift in Sources */,
 				39622EBC28E3483800DDCFA3 /* RocketType.swift in Sources */,
+				39F819C828E3D3B1000C5C66 /* ImageFetcher.swift in Sources */,
 				39F17D3728E0F2C100E079A7 /* LaunchSite.swift in Sources */,
 				39F17D4B28E0F41A00E079A7 /* LandingVehicle.swift in Sources */,
 				39F17D4728E0F3DF00E079A7 /* Core.swift in Sources */,
@@ -288,6 +295,7 @@
 				39622EBD28E3483800DDCFA3 /* Telemetry.swift in Sources */,
 				39622EC928E36A2C00DDCFA3 /* JSONSchemaSupport.swift in Sources */,
 				39F17D4528E0F38E00E079A7 /* FirstStage.swift in Sources */,
+				39CD3B0028E3BC5F00A9D674 /* ContainerViewController.swift in Sources */,
 				39622EC028E3483800DDCFA3 /* LaunchDateSource.swift in Sources */,
 				39AC8F3628E3701200120338 /* FlightDetailViewController.swift in Sources */,
 				39F17D3F28E0F33300E079A7 /* Rocket.swift in Sources */,

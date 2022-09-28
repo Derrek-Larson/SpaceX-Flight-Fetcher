@@ -9,11 +9,14 @@ import UIKit
 
 class SpaceXFlightTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var flightIDLabel: UILabel!
+    @IBOutlet weak var missionNameLabel: UILabel!
+    @IBOutlet weak var rocketNameLabel: UILabel!
+    @IBOutlet weak var launchSiteLabel: UILabel!
+    @IBOutlet weak var launchDateLabel: UILabel!
+    @IBOutlet weak var launchPatchImage: UIImageView!
     
     var spaceXFlightModelElement: SpaceXFlightModelElement?
     
-    @IBOutlet weak var flightDateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,8 +30,9 @@ class SpaceXFlightTableViewCell: UITableViewCell {
     
     public func configure(spaceXFlightElement: SpaceXFlightModelElement) {
         spaceXFlightModelElement = spaceXFlightElement
-        flightIDLabel.text = "Flight Number \(spaceXFlightElement.flightNumber)"
-        flightDateLabel.text = spaceXFlightElement.launchDateUTC
+        missionNameLabel.text = spaceXFlightElement.missionName
+        rocketNameLabel.text = spaceXFlightElement.rocket.rocketName.rawValue
+        launchDateLabel.text = spaceXFlightElement.launchDateUTC
+        launchSiteLabel.text = spaceXFlightElement.launchSite.siteName.rawValue
     }
-        
 }
