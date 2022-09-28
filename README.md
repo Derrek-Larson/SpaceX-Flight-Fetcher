@@ -14,6 +14,10 @@ Combine is used to reactively respond to the API request and refresh the tablevi
 Images are cached if not found in the ViewModel's dictionary.
 - dictionary was chosen for fast search times, and because the Flight's flight number uniquely identifies it.
 
+## Test Devices/Sims Used:
+- iPad Pro (9.7") (portrait single column, landscape 2 column)
+- iPhone 12 Pro Max (portrait single column, landscape 2 column)
+- iPhone 8 (portrait single column, landscape single column)
 ## Wish I Could Have:
 - ActivityIndicator for TableView load. Attempted to implement, but would not appear. I believe there is a conflict with the SplitViewController, although I couldn't find details online in a timely fashion. When the ActivityIndicator isHidden was checked in the SB I observed that the SplitViewController wouldn't respect .compact portrait mode.
 
